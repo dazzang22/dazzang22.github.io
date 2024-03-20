@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "다짱이"
-  avatar           : "/assets/images/pro.jpg"
+  avatar           : "/assets/images/riku.png"
   bio              : "오직 **귀여운 것만** 기록합니다."
   location         : "South Korea"
   email            : "lisa7041@naver.com"
