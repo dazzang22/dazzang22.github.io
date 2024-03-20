@@ -291,3 +291,11 @@ defaults:
       share: true
       related: true
       show_date: true
+      toc: true
+      toc_sticky: true
+      toc_label: 다짱이의 블로그에 어서와 !
+      toc_icon: "fa-solid fa-snowflake"
+      author_profile: false
+      sidebar:
+        nav: "docs"
+      typora-root-url: ../
