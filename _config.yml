@@ -285,7 +285,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
@@ -295,8 +295,7 @@ defaults:
       toc_sticky: true
       toc_label: 다짱이의 블로그에 어서와 !
       toc_icon: "fa-solid fa-snowflake"
-      author_profile: false
-      # sidebar:
-        # nav: "docs"
+      sidebar:
+        nav: "nav__list"
       sidebar_main: true
       typora-root-url: ../
