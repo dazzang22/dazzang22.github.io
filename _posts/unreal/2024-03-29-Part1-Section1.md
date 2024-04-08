@@ -1,11 +1,16 @@
 ---
 layout: single
-title: "Part1-언리얼 C++"
+title: "Part1-Setion1,2-언리얼 C++"
 categories: unreal
 tag: [unreal]
 ---
 
 ## Unreal C++ 코딩 표준
+
+#### 언리얼 코드 컴파일 방식
+
+* 헤더 파일에 변경이 발생하면 - 에디터를 끄고 비주얼 스튜디오에서 컴파일
+* 소스 파일에만 변경이 발생하면 - 라이브 코딩으로 컴파일 **( Ctrl + Alt + F11 )**
 
 #### 구조 
 
