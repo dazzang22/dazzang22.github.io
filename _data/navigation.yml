@@ -12,6 +12,10 @@ main:
         url: /categories/unity/
       - title: "Unreal" 
         url: /categories/unreal/
+      - title: "SQL" 
+        url: /categories/sql/
+      - title: "C++"
+        url: /categories/cpp/
   
   - title: "Category"
     url: /categories/
