@@ -8,8 +8,8 @@ tag: [lifestyle,dev-journal, daily, mindset]
 | Day  | 영어 질문                                                  | 질문                                       |
 | ---- | ---------------------------------------------------------- | ------------------------------------------ |
 | 1✅   | What kind of environment did I grow up in?                 | 나의 성장 배경은?                          |
-| 2    | What kind of person do I think I am?                       | 나는 어떤 사람인가?                        |
-| 3    | What are my strengths when working with others?            | 팀워크에서 강점은?                         |
+| 2✅   | What kind of person do I think I am?                       | 나는 어떤 사람인가?                        |
+| 3✅   | What are my strengths when working with others?            | 팀워크에서 강점은?                         |
 | 4    | What are my weaknesses, and how do I manage them?          | 단점은 무엇이며 어떻게 보완하는가?         |
 | 5    | Why did I choose my major or field of interest?            | 전공/관심 분야를 선택한 이유는?            |
 | 6    | What is one experience that changed how I think?           | 내 사고방식을 바꾼 경험은?                 |
