@@ -16,7 +16,7 @@ html, body {
 /* 공통 라운드 & 그림자 */
 :root { --radius-xxl: 20px; }
 
-.sidebar, .archive__item, .notice, .card {
+.sidebar, .notice{
   border-radius: var(--radius-xxl);
   box-shadow: 0 10px 28px rgba(255,147,179,.14);
   overflow: hidden;
