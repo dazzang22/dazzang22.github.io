@@ -262,6 +262,14 @@ body {
     color: #fff;
     text-decoration: none;
   }
+
+  .page__hero .btn,
+.btn {
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: var(--radius-chip);
+    padding: .65em 1.15em;
+  }
 }
 
 /*

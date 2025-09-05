@@ -11,16 +11,16 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes@4.27.3"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme             : "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin    : "kawaii" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "다짱이의 블로그"
+title                    : "DAZZANG@2 ARCHIV3"
 title_separator          : "|"
-subtitle                 : "dazzang2 Word"
+subtitle                 : "uneverknowwhyurhere"
 name                     : "다짱이"
-description              : "귀여운 것만 기록합니다"
+description              : "LIVE FAST DIE YOUNG"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 url                      : "https://dazzang22.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -105,11 +105,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "다짱이"
+  name             : "Dazzag2"
   avatar           : "/assets/images/riku.png"
-  bio              : "오직 **귀여운 것만** 기록합니다."
+  bio              : "LIVE FAST DIE YOUNG"
   location         : "South Korea"
-  email            : "lisa7041@naver.com"
+  email            : "lisa7041@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -225,6 +225,7 @@ paginate_path: /page:num/
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -293,7 +294,7 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: true
-      toc_label: 다짱이의 블로그에 어서와 !
+      toc_label: "DAZZANG2 ARCHIV3"
       toc_icon: "fa-solid fa-snowflake"
       sidebar:
         nav: "nav__list"

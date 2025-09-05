@@ -1,4 +1,71 @@
 ---
 layout: home
-author_profile: true
+title: "DAZZANG2 ARCHIV3"
+author_profile: true   # 홈 오른쪽(혹은 아래) 프로필 카드 표시
+excerpt: "LIVE FAST DIE YOUNG"
+# 히어로(머리) 영역
+header:
+  overlay_image: /assets/images/hero.jpg
+  overlay_color: "#ffd5e1"   # 파스텔 핑크 오버레이
+  overlay_filter: 0.25       # 0.2~0.4 사이가 글자 가독성 좋슴
+  caption: "좋아하는걸 기록하는걸 너무 좋아하는걸💦"
+  actions:
+    - label: "Categories"
+      url: /categories/
+      btn_class: "btn--primary"
+    - label: "Search"
+      url: /search/
+      btn_class: "btn--primary"
+
+# 타일(피처) 섹션 데이터
+feature_row:
+  - image_path: /assets/images/feat1.png
+    alt: "C++"
+    title: "C++ 노트"
+    excerpt: "문법·패턴·실수 모음"
+    url: /categories/cpp/
+    btn_label: "바로가기"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/feat2.png
+    alt: "Unity"
+    title: "Unity 메모"
+    excerpt: "컴포넌트·에러리스트 정리"
+    url: /categories/unity/
+    btn_label: "바로가기"
+  - image_path: /assets/images/feat3.png
+    alt: "SQL"
+    title: "SQL 스터디"
+    excerpt: "Week별 정리와 실습"
+    url: /categories/sql/
+    btn_label: "바로가기"
+
+# 갤러리 섹션 데이터
+gallery:
+  - image_path: /assets/images/p1.jpg
+    alt: "pic1"
+    title: "최근 사진 1"
+  - image_path: /assets/images/p2.jpg
+    alt: "pic2"
+    title: "최근 사진 2"
+  - image_path: /assets/images/p3.jpg
+    alt: "최근 사진 3"
+  - image_path: /assets/images/p4.jpg
+    alt: "pic4"
+    title: "최근 사진 4"
 ---
+
+{% comment %}
+아래 컨텐츠는 ‘포스트 리스트’ 위쪽에 표시됨. home 레이아웃은 page.content → 최신글 순으로 렌더함.
+{% endcomment %}
+
+<!-- 소개 문단 -->
+Why u here? 
+
+<!-- 피처 타일 3개 -->
+{% include feature_row id="feature_row" %}
+
+<!-- 갤러리 섹션 타이틀 -->
+U Fancy?
+{% include gallery id="gallery" caption="귀여움 아카이브" %}
+
+<!-- 최신 글은 home 레이아웃이 자동으로 아래에 나열함 -->
