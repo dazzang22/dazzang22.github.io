@@ -10,13 +10,13 @@ html, body {
 
 /* 전역 폰트 & 기본 색감 */
 html, body {
-  background: #fffafc;
+  background: #271818;
 }
 
 /* 공통 라운드 & 그림자 */
 :root { --radius-xxl: 20px; }
 
-.sidebar, .notice{
+.sidebar, .archive__item, .notice, .card {
   border-radius: var(--radius-xxl);
   box-shadow: 0 10px 28px rgba(255,147,179,.14);
   overflow: hidden;
@@ -25,10 +25,10 @@ html, body {
 /* 히어로(헤더) 강화 */
 .page__hero--overlay { min-height: 72vh; }
 .page__hero-caption {
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
   background: rgba(255,255,255,.45);
   color: #1f2937;
-  padding: .5rem .9rem;
+  padding: .5rem .6rem;
 }
 
 /* 버튼: 테두리 제거 + 말랑 + 은은한 그라데 */
@@ -39,6 +39,16 @@ html, body {
 }
 .btn:hover { transform: translateY(-1px); transition: transform .15s ease; }
 .btn:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+/* 공통 패딩 추가 */
+.sidebar,
+.archive__item,
+.notice,
+.card,
+.highlight,
+pre {
+  padding: 1rem 1.25rem; /* 위아래 1rem, 좌우 1.25rem */
+}
 
 /* 태그/카테고리 칩 */
 .page__taxonomy-item {
@@ -68,4 +78,34 @@ html, body {
   padding: .8rem 1.1rem;
 }
 
+/* notice--primary 안의 글자 색상 강제 */
+.notice--primary {
+  color: #1f2937 !important;   /* 어두운 글자색 */
+  font-size: 1.0rem !important;          /* 기본보다 살짝 키움 */
+  line-height: 1.6;
+}
+
+.notice--primary a {
+  color: #c01b68 !important;   /* 링크 색상 */
+}
+
+.notice--primary strong {
+  font-size: 1.15rem; 
+  color: #000 !important;      /* 굵은 글씨는 더 진하게 */
+}
+
+
 .page__hero--overlay::before { pointer-events: none; }
+
+/* =========================
+   NAV 색상 커스텀 (규칙 덮어쓰기)
+   커스텀 SCSS 맨 아래에 추가
+   ========================= */
+
+/* 상단 네비(바) 배경/글자 */
+.masthead { background: transparent !important; } /* masthead 자체를 투명으로 두고, 아래 greedy-nav만 칠함 */
+
+.greedy-nav {
+  background: linear-gradient(180deg, rgba(68,39,39,.85) 0%, rgba(51,29,29,.85) 100%) !important;
+  backdrop-filter: blur(8px);
+}

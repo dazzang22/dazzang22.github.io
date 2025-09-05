@@ -10,6 +10,8 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
+  background: transparent;
+  
 
   &__inner-wrap {
     @include clearfix;
@@ -38,6 +40,7 @@
     }
   }
 }
+
 
 .site-logo img {
   max-height: 2rem;
