@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "ko-KR"
 title                    : "다짱이의 블로그"
 title_separator          : "|"
-subtitle                 : "dazzang2 the greatest coding KING"
+subtitle                 : "dazzang2 Word"
 name                     : "다짱이"
 description              : "귀여운 것만 기록합니다"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"

@@ -16,6 +16,8 @@ main:
         url: /categories/sql/
       - title: "C++"
         url: /categories/cpp/
+      - title: "Lyrics"
+        url: /categories/lyrics/
   
   - title: "Category"
     url: /categories/
