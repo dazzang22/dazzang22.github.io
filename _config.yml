@@ -21,9 +21,9 @@ title_separator          : "|"
 subtitle                 : "uneverknowwhyurhere"
 name                     : "다짱이"
 description              : "LIVE FAST DIE YOUNG"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 url                      : "https://dazzang22.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+timezone                 : "Asia/Seoul"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/pro.jpg"
@@ -231,6 +231,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 # mimic GitHub Pages with --safe
 whitelist:
