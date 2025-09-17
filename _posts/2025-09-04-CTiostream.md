@@ -1,5 +1,8 @@
 ---
-
+layout: single
+title: "Array"
+categories: cpp
+tags: [cpp]
 ---
 
 ### 빠른 입출력 세팅

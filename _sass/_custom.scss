@@ -57,7 +57,7 @@ html, body {
 .btn--primary {
   background: linear-gradient(180deg, rgba(255,255,255,.22), rgba(0,0,0,.06)) !important;
 }
-.btn:hover { transform: translateY(-1px); transition: transform .15s ease; }
+.btn:hover { transform: translateY(-1px); transition: transform .15s ease; text-decoration: underline; }
 .btn:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
 /* 공통 패딩 추가 */
@@ -76,10 +76,11 @@ pre {
   background: #ffe4ec;
   border: 0;
   padding: .2em .7em;
+  color: darken($primary-color, 12%); 
 }
 
 /* 리스트 불릿을 반짝이로 */
-.page__content ul li::marker { content: '☠️'; }
+/* .page__content ul li::marker { content: '☠️'; } */
 
 /* 갤러리 이미지 말랑 + 살짝 튀는 호버 */
 .gallery .grid__item img {
@@ -110,7 +111,7 @@ pre {
 }
 
 .notice--primary strong {
-  font-size: 1.15rem; 
+  font-size: 1.12rem; 
   color: #000 !important;      /* 굵은 글씨는 더 진하게 */
 }
 
@@ -128,4 +129,102 @@ pre {
 .greedy-nav {
   background: linear-gradient(180deg, rgba(68,39,39,.85) 0%, rgba(51,29,29,.85) 100%) !important;
   backdrop-filter: blur(8px);
+}
+
+/* ===== Sidebar & TOC colors (kawaii skin 기반) ===== */
+
+/* 왼쪽 사이드바: 제목 */
+.sidebar .nav__title,
+.sidebar .nav__sub-title {
+  color: $primary-color; // 포인트 핑크로 타이틀 색
+}
+
+/* 왼쪽 사이드바: 메뉴 링크 */
+.sidebar .nav__list .nav__items a {
+  color: $muted-text-color;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: .28rem .5rem;
+}
+
+/* ===== Sidebar & TOC colors (kawaii skin 기반) ===== */
+
+/* 왼쪽 사이드바: 제목 */
+.sidebar .nav__title,
+.sidebar .nav__sub-title {
+  color: $primary-color; // 포인트 핑크로 타이틀 색
+}
+
+/* 왼쪽 사이드바: 메뉴 링크 */
+.sidebar .nav__list .nav__items a {
+  color: $muted-text-color;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: .28rem .5rem;
+}
+
+.sidebar .nav__list .nav__items a:hover {
+  color: darken($primary-color, 12%);          // 글자는 살짝 진한 핑크
+  text-decoration: underline;
+}
+
+/* 현재(active) 항목 강조 */
+.sidebar .nav__list .nav__items .active,
+.sidebar .nav__list .nav__items a.active {
+  background: $primary-color;
+  @include yiq-contrasted($primary-color);     // 배경 색상에 맞춰 글자색 자동(흰/검)
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+/* 오른쪽 TOC: 제목(h4/h5 어떤 태그여도 동일) */
+.sidebar__right .toc .nav__title {
+  margin: 0;                                   // h5 기본 위여백 방지
+  background: $primary-color;
+  @include yiq-contrasted($primary-color);
+  padding: .5rem .75rem;
+  border-radius: 8px;
+  display: flex; align-items: center; gap: .4rem;
+}
+
+/* 오른쪽 TOC: 목록 링크 */
+.sidebar__right .toc .toc__menu a {
+  color: $muted-text-color;
+  display: block;
+  border-radius: 10px;
+  padding: .25rem .5rem;
+  text-decoration: none;
+}
+
+.sidebar__right .toc .toc__menu a:hover {
+  text-decoration: underline;
+}
+
+/* 오른쪽 TOC: 제목(h4/h5 어떤 태그여도 동일) */
+.sidebar__right .toc .nav__title {
+  margin: 0;                                   // h5 기본 위여백 방지
+  background: $primary-color;
+  @include yiq-contrasted($primary-color);
+  padding: .5rem .75rem;
+  display: flex; align-items: center; gap: .4rem;
+}
+
+/* 오른쪽 TOC: 목록 링크 */
+.sidebar__right .toc .toc__menu a {
+  color: #000;
+  display: block;
+  border-radius: 10px;
+  padding: .25rem .5rem;
+  text-decoration: none;
+}
+.sidebar__right .toc .toc__menu a:hover {
+  background: mix(white, $primary-color, 88%); // 아주 옅은 핑크 배경
+  color: darken($primary-color, 12%);          // 글자는 살짝 진한 핑크
+  text-decoration: underline;
+}
+
+.sidebar__right .toc .active > a {
+  font-weight: 700;
+  color: darken($primary-color, 12%); 
+  text-decoration: underline;
 }
