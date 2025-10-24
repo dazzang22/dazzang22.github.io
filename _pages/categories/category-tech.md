@@ -1,15 +1,14 @@
 ---
-title: "Unity"
+title: "Tech"
 layout: archive
-permalink: /categories/unity/
+permalink: /categories/tech/
 author_profile: false
 sidebar_main: true
 entries_layout: grid
 ---
 
-{% assign posts = site.categories.unity
-  | where_exp: "p", "p.categories contains 'tech'"
-  | sort: "date"
+{% assign posts = site.categories.tech 
+  | sort: "date" 
   | reverse %}
 
 {% for post in posts %}

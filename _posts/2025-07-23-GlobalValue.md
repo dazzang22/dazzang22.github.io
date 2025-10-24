@@ -1,8 +1,11 @@
 ---
 layout: single
-title: "전역변수"
-categories: cpp
-tag: [cpp]
+title: "[C++] 전역변수 (Global Variable)"
+date: 2025-07-23
+categories: [tech, cpp]
+tags: [cpp, variable, global, scope, memory]
+permalink: /tech/cpp/global-variable/
+author_profile: false
 ---
 
 # C++ 전역 변수, 앙딱정
