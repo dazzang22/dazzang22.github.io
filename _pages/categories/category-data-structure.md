@@ -1,21 +1,9 @@
----
-title: "Data Structure"
-layout: archive
-permalink: /categories/data-structure/
-author_profile: false
-sidebar_main: true
-entries_layout: grid
----
+--- 
+title: "Data Structure" 
+layout: archive 
+permalink: /categories/data-structure/ 
+author_profile: true 
+sidebar_main: true 
+--- 
 
-{% assign empty = "" | split: "" %}
-
-{% assign posts = site.categories["data-structure"] 
-  | default: empty
-  | where_exp: "p", "p.categories contains 'tech'"
-  | sort: "date"
-  | reverse %}
-
-{% for post in posts %}
-  {% include archive-single.html type=page.entries_layout %}
-{% endfor %}
-
+{% assign posts = site.categories.data-structure %} {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

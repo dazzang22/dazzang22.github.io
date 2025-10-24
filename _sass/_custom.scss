@@ -1,230 +1,147 @@
-.page { overflow: visible !important; }
-
-/* 전역 폰트 & 기본 색감 */
-html, body {
-  background: #fffafc;
-}
-
-/* 공통 라운드 & 그림자 */
-.page { overflow: visible !important; }
-
-/* 전역 폰트 & 기본 색감 */
-html, body {
-  background: #271818;
-}
-
 /* 공통 라운드 & 그림자 */
 :root { --radius-xxl: 20px; }
 
-.sidebar, .archive__item, .notice, .card {
-  border-radius: var(--radius-xxl);
-  box-shadow: 0 10px 28px rgba(255,147,179,.14);
-  overflow: hidden;
+.page { overflow: visible !important; }
+
+/* 전역 배경/텍스트 – 스킨 변수 사용 */
+html, body {
+  background: $background-color;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.7;
 }
 
-/* 히어로(헤더) 강화 */
-.page__hero--overlay { min-height: 50vh; 
+/* 카드/섹션 기본 스타일 */
+.sidebar, .archive__item, .notice, .card, .highlight, pre {
+  border-radius: var(--radius-xxl);
+  background: mix($background-color, #000, 80%); /* 배경보다 살짝 밝은 어두운 서피스 */
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+  border: 1px solid $border-color;
+  padding: 1rem 1.25rem;
+}
+
+/* 히어로(헤더) */
+.page__hero--overlay {
+  min-height: 50vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex; flex-direction: column; justify-content: center;
 }
-
 .page__hero--overlay .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  /* 가로 가운데 */
-  text-align: center;   /* 텍스트도 가운데 */
+  display: flex; flex-direction: column; align-items: center; text-align: center;
 }
-
 .page__hero-caption {
-  backdrop-filter: blur(8px);
-  background: rgba(255,255,255,.45);
-  color: #1f2937;
-  padding: .5rem .6rem;
-  max-width: 720px;       /* 가로폭 제한 */
-  margin: 0 auto;         /* 가운데 정렬 */
-  border-radius: 12px;    /* 선택: 말랑하게 */
-  box-shadow: 0 8px 20px rgba(0,0,0,.06); /* 선택: 살짝 그림자 */
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.45);            /* 어두운 글라스 → 흰 텍스트 가독성↑ */
+  color: $text-color;
+  padding: .6rem .8rem;
+  max-width: 720px; margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  box-shadow: 0 12px 28px rgba(0,0,0,.4);
 }
 
-/* 버튼: 테두리 제거 + 말랑 + 은은한 그라데 */
-.page__hero .btn,
-.btn { border: 0 !important; box-shadow: none !important; border-radius: 9999px; padding: .65em 1.15em; }
-.btn--primary {
-  background: linear-gradient(180deg, rgba(255,255,255,.22), rgba(0,0,0,.06)) !important;
+/* 버튼 - 추후 수정 */
+.page__hero .btn, .btn {
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 9999px;
+  padding: .65em 1.15em;
+  // background: linear-gradient(180deg, mix($primary-color, white, 25%), mix($primary-color, black, 15%)) !important;
+  color: $text-color;
+  transition: transform .15s ease;
 }
-.btn:hover { transform: translateY(-1px); transition: transform .15s ease; text-decoration: underline; }
-.btn:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.btn:hover { transform: translateY(-1px); text-decoration: underline; }
+.btn:focus-visible { outline: 2px solid $primary-color; outline-offset: 3px; }
 
-/* 공통 패딩 추가 */
-.sidebar,
-.archive__item,
-.notice,
-.card,
-.highlight,
-pre {
-  padding: 1rem 1.25rem; /* 위아래 1rem, 좌우 1.25rem */
-}
+/* 링크 */
+a { color: $link-color; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 /* 태그/카테고리 칩 */
 .page__taxonomy-item {
-  border-radius: 9999px;
-  background: #ffe4ec;
-  border: 0;
+  border-radius: 9999px; border: 0;
   padding: .2em .7em;
-  color: darken($primary-color, 12%); 
+  background: mix($primary-color, $background-color, 15%);
+  color: mix($primary-color, #000, 20%);
 }
 
-/* 리스트 불릿을 반짝이로 */
-/* .page__content ul li::marker { content: '☠️'; } */
-
-/* 갤러리 이미지 말랑 + 살짝 튀는 호버 */
+/* 갤러리 이미지 */
 .gallery .grid__item img {
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
   transition: transform .18s ease;
 }
 .gallery .grid__item img:hover { transform: translateY(-2px) rotate(-.5deg); }
 
-/* 코드블록도 파스텔 */
+/* 코드/프리포맷 */
 .highlight, pre, code { border-radius: 12px; }
-
-/* 검색 입력창 둥글게 */
-.search-content .search-input {
-  border-radius: 9999px; border: 0; box-shadow: 0 4px 16px rgba(0,0,0,.08);
-  padding: .8rem 1.1rem;
+pre, code, .highlight {
+  background: $code-background-color;
+  color: $text-color;
+  border: 1px solid $border-color;
 }
 
-/* notice--primary 안의 글자 색상 강제 */
+/* 검색 입력창 */
+.search-content .search-input {
+  border-radius: 9999px; border: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+  padding: .8rem 1.1rem;
+  color: $text-color;
+  background: mix($background-color, #000, 85%);
+}
+
+/* notice */
 .notice--primary {
-  color: #1f2937 !important;   /* 어두운 글자색 */
-  font-size: 1.0rem !important;          /* 기본보다 살짝 키움 */
+  background: mix($primary-color, $background-color, 16%);
+  color: $text-color !important;
+  border: 1px solid $border-color;
+  font-size: 1.0rem !important;
   line-height: 1.6;
 }
+.notice--primary a { color: $primary-color !important; }
+.notice--primary strong { color: $text-color !important; }
 
-.notice--primary a {
-  color: #c01b68 !important;   /* 링크 색상 */
-}
-
-.notice--primary strong {
-  font-size: 1.12rem; 
-  color: #000 !important;      /* 굵은 글씨는 더 진하게 */
-}
-
-
-.page__hero--overlay::before { pointer-events: none; }
-
-/* =========================
-   NAV 색상 커스텀 (규칙 덮어쓰기)
-   커스텀 SCSS 맨 아래에 추가
-   ========================= */
-
-/* 상단 네비(바) 배경/글자 */
-.masthead { background: transparent !important; } /* masthead 자체를 투명으로 두고, 아래 greedy-nav만 칠함 */
-
+/* NAV */
+.masthead { background: transparent !important; }
 .greedy-nav {
-  background: linear-gradient(180deg, rgba(68,39,39,.85) 0%, rgba(51,29,29,.85) 100%) !important;
+  background: rgba(0,0,0,.4) !important;
   backdrop-filter: blur(8px);
+  border-bottom: 1px solid $border-color;
 }
 
-/* ===== Sidebar & TOC colors (kawaii skin 기반) ===== */
-
-/* 왼쪽 사이드바: 제목 */
-.sidebar .nav__title,
-.sidebar .nav__sub-title {
-  color: $primary-color; // 포인트 핑크로 타이틀 색
-}
-
-/* 왼쪽 사이드바: 메뉴 링크 */
+/* Sidebar & TOC */
+.sidebar .nav__title, .sidebar .nav__sub-title { color: $primary-color; }
 .sidebar .nav__list .nav__items a {
-  color: $muted-text-color;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: .28rem .5rem;
+  color: $muted-text-color; text-decoration: none;
+  border-radius: 10px; padding: .28rem .5rem;
 }
-
-/* ===== Sidebar & TOC colors (kawaii skin 기반) ===== */
-
-/* 왼쪽 사이드바: 제목 */
-.sidebar .nav__title,
-.sidebar .nav__sub-title {
-  color: $primary-color; // 포인트 핑크로 타이틀 색
-}
-
-/* 왼쪽 사이드바: 메뉴 링크 */
-.sidebar .nav__list .nav__items a {
-  color: $muted-text-color;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: .28rem .5rem;
-}
-
 .sidebar .nav__list .nav__items a:hover {
-  color: darken($primary-color, 12%);          // 글자는 살짝 진한 핑크
-  text-decoration: underline;
+  color: darken($primary-color, 12%); text-decoration: underline;
 }
-
-/* 현재(active) 항목 강조 */
 .sidebar .nav__list .nav__items .active,
 .sidebar .nav__list .nav__items a.active {
   background: $primary-color;
-  @include yiq-contrasted($primary-color);     // 배경 색상에 맞춰 글자색 자동(흰/검)
-  font-weight: 700;
-  border-radius: 10px;
+  @include yiq-contrasted($primary-color);
+  font-weight: 700; border-radius: 10px;
 }
 
-/* 오른쪽 TOC: 제목(h4/h5 어떤 태그여도 동일) */
 .sidebar__right .toc .nav__title {
-  margin: 0;                                   // h5 기본 위여백 방지
-  background: $primary-color;
+  margin: 0; background: $primary-color;
   @include yiq-contrasted($primary-color);
-  padding: .5rem .75rem;
-  border-radius: 8px;
+  padding: .5rem .75rem; border-radius: 8px;
   display: flex; align-items: center; gap: .4rem;
 }
-
-/* 오른쪽 TOC: 목록 링크 */
 .sidebar__right .toc .toc__menu a {
-  color: $muted-text-color;
-  display: block;
-  border-radius: 10px;
-  padding: .25rem .5rem;
-  text-decoration: none;
-}
-
-.sidebar__right .toc .toc__menu a:hover {
-  text-decoration: underline;
-}
-
-/* 오른쪽 TOC: 제목(h4/h5 어떤 태그여도 동일) */
-.sidebar__right .toc .nav__title {
-  margin: 0;                                   // h5 기본 위여백 방지
-  background: $primary-color;
-  @include yiq-contrasted($primary-color);
-  padding: .5rem .75rem;
-  display: flex; align-items: center; gap: .4rem;
-}
-
-/* 오른쪽 TOC: 목록 링크 */
-.sidebar__right .toc .toc__menu a {
-  color: #000;
-  display: block;
-  border-radius: 10px;
-  padding: .25rem .5rem;
-  text-decoration: none;
+  color: $text-color; display: block; border-radius: 10px;
+  padding: .25rem .5rem; text-decoration: none;
 }
 .sidebar__right .toc .toc__menu a:hover {
-  background: mix(white, $primary-color, 88%); // 아주 옅은 핑크 배경
-  color: darken($primary-color, 12%);          // 글자는 살짝 진한 핑크
-  text-decoration: underline;
+  background: mix($primary-color, $background-color, 18%);
+  color: darken($primary-color, 12%); text-decoration: underline;
 }
-
 .sidebar__right .toc .active > a {
-  font-weight: 700;
-  color: darken($primary-color, 12%); 
-  text-decoration: underline;
+  font-weight: 700; color: darken($primary-color, 12%); text-decoration: underline;
 }
