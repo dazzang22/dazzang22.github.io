@@ -4,14 +4,10 @@ main:
     sublinks:
       - title: "Algorithm" 
         url: /categories/algorithm/
-      - title: "Data Structure" 
-        url: /categories/data-structure/
       - title: "Jekyll Blog" 
         url: /categories/jekyll-blog/
       - title: "Unity" 
         url: /categories/unity/
-      - title: "Unreal" 
-        url: /categories/unreal/
       - title: "SQL" 
         url: /categories/sql/
       - title: "C++"

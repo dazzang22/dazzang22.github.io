@@ -1,5 +1,5 @@
 /* 공통 라운드 & 그림자 */
-:root { --radius-xxl: 20px; }
+:root { --radius-xxl: 10px; }
 
 .page { overflow: visible !important; }
 
@@ -18,8 +18,9 @@ html, body {
   background: mix($background-color, #000, 80%); /* 배경보다 살짝 밝은 어두운 서피스 */
   box-shadow: 0 10px 28px rgba(0,0,0,.35);
   border: 1px solid $border-color;
-  padding: 1rem 1.25rem;
+  padding: 0.6rem 0.6rem;
 }
+
 
 /* 히어로(헤더) */
 .page__hero--overlay {
@@ -91,6 +92,7 @@ pre, code, .highlight {
   padding: .8rem 1.1rem;
   color: $text-color;
   background: mix($background-color, #000, 85%);
+  font-size: 1.0rem !important;
 }
 
 /* notice */
