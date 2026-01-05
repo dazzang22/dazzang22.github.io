@@ -128,7 +128,7 @@ author:
       url: "https://github.com/dazzang22"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/da_hyy0"
+      # url: "https://instagram.com/da_hyy0"
 
 # Site Footer
 footer:
@@ -150,7 +150,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/da_hyy0"
+      # url: "https://instagram.com/da_hyy0"
 
 
 # Reading Files
