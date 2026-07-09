@@ -1,85 +1,159 @@
 /* 공통 라운드 & 그림자 */
-:root { --radius-xxl: 10px; }
+:root {
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-pill: 9999px;
+}
 
-.page { overflow: visible !important; }
+.page {
+  overflow: visible !important;
+}
 
-/* 전역 배경/텍스트 – 스킨 변수 사용 */
+/* 전역 배경/텍스트 */
 html, body {
   background: $background-color;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 /* 카드/섹션 기본 스타일 */
-.sidebar, .archive__item, .notice, .card, .highlight, pre {
-  border-radius: var(--radius-xxl);
-  background: mix($background-color, #000, 80%); /* 배경보다 살짝 밝은 어두운 서피스 */
-  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+.sidebar,
+.notice,
+.card,
+.highlight,
+pre {
+  border-radius: var(--radius-xl);
+  background: mix(#ffffff, $background-color, 72%);
+  box-shadow: 0 8px 24px rgba(45, 65, 72, .08);
   border: 1px solid $border-color;
-  padding: 0.6rem 0.6rem;
+  padding: .75rem .8rem;
 }
 
+.archive__item {
+  border-radius: var(--radius-xl);
+  background: mix(#ffffff, $background-color, 72%);
+  box-shadow: 0 4px 14px rgba(45, 65, 72, .08);
+  border: 1px solid $border-color;
 
-/* 히어로(헤더) */
+  padding: 1.5rem 1.7rem;
+  margin-bottom: 1.1rem;
+
+  height: auto;
+  min-height: 0;
+}
+
+.archive__item-excerpt {
+  margin-top: .35rem;
+  margin-bottom: 0;
+  line-height: 1.65;
+}
+
+.archive__item-teaser {
+  display: none;
+}
+
+/* 히어로 */
 .page__hero--overlay {
-  min-height: 50vh;
+  min-height: 46vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  display: flex; flex-direction: column; justify-content: center;
-}
-.page__hero--overlay .wrapper {
-  display: flex; flex-direction: column; align-items: center; text-align: center;
-}
-.page__hero-caption {
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,.45);            /* 어두운 글라스 → 흰 텍스트 가독성↑ */
-  color: $text-color;
-  padding: .6rem .8rem;
-  max-width: 720px; margin: 0 auto;
-  border-radius: 12px;
-  border: 1px solid $border-color;
-  box-shadow: 0 12px 28px rgba(0,0,0,.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* 버튼 - 추후 수정 */
-.page__hero .btn, .btn {
-  border: 0 !important;
-  box-shadow: none !important;
-  border-radius: 9999px;
-  padding: .65em 1.15em;
-  // background: linear-gradient(180deg, mix($primary-color, white, 25%), mix($primary-color, black, 15%)) !important;
-  color: $text-color;
-  transition: transform .15s ease;
+.page__hero--overlay .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.btn:hover { transform: translateY(-1px); text-decoration: underline; }
-.btn:focus-visible { outline: 2px solid $primary-color; outline-offset: 3px; }
+
+.page__hero-caption {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, .68);
+  color: $text-color;
+  padding: .7rem .9rem;
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(75, 175, 200, .18);
+  box-shadow: 0 12px 30px rgba(45, 65, 72, .12);
+}
+
+/* 버튼 */
+.page__hero .btn,
+.btn {
+  border: 1px solid rgba(75, 175, 200, .26) !important;
+  box-shadow: none !important;
+  border-radius: var(--radius-pill);
+  padding: .65em 1.15em;
+  background: $primary-color !important;
+  color: #ffffff !important;
+  transition: transform .15s ease, background .15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: darken($primary-color, 6%) !important;
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid rgba(75, 175, 200, .45);
+  outline-offset: 3px;
+}
 
 /* 링크 */
-a { color: $link-color; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darken($link-color, 8%);
+  text-decoration: underline;
+}
 
 /* 태그/카테고리 칩 */
 .page__taxonomy-item {
-  border-radius: 9999px; border: 0;
-  padding: .2em .7em;
-  background: mix($primary-color, $background-color, 15%);
-  color: mix($primary-color, #000, 20%);
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(75, 175, 200, .18);
+  padding: .22em .72em;
+  background: mix($primary-color, #ffffff, 9%);
+  color: darken($primary-color, 18%);
+}
+
+.page__taxonomy-item:hover {
+  background: mix($primary-color, #ffffff, 16%);
+  text-decoration: none;
 }
 
 /* 갤러리 이미지 */
 .gallery .grid__item img {
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.3);
-  transition: transform .18s ease;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 22px rgba(45, 65, 72, .12);
+  transition: transform .18s ease, box-shadow .18s ease;
 }
-.gallery .grid__item img:hover { transform: translateY(-2px) rotate(-.5deg); }
+
+.gallery .grid__item img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(45, 65, 72, .16);
+}
 
 /* 코드/프리포맷 */
-.highlight, pre, code { border-radius: 12px; }
-pre, code, .highlight {
+.highlight,
+pre,
+code {
+  border-radius: var(--radius-lg);
+}
+
+pre,
+code,
+.highlight {
   background: $code-background-color;
   color: $text-color;
   border: 1px solid $border-color;
@@ -87,63 +161,113 @@ pre, code, .highlight {
 
 /* 검색 입력창 */
 .search-content .search-input {
-  border-radius: 9999px; border: 0;
-  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+  border-radius: var(--radius-pill);
+  border: 1px solid $border-color;
+  box-shadow: 0 6px 18px rgba(45, 65, 72, .08);
   padding: .8rem 1.1rem;
   color: $text-color;
-  background: mix($background-color, #000, 85%);
-  font-size: 1.0rem !important;
+  background: #ffffff;
+  font-size: 1rem !important;
+}
+
+.search-content .search-input:focus {
+  outline: 2px solid rgba(75, 175, 200, .32);
+  outline-offset: 2px;
 }
 
 /* notice */
 .notice--primary {
-  background: mix($primary-color, $background-color, 16%);
+  background: mix($primary-color, #ffffff, 10%);
   color: $text-color !important;
-  border: 1px solid $border-color;
-  font-size: 1.0rem !important;
-  line-height: 1.6;
+  border: 1px solid rgba(75, 175, 200, .18);
+  font-size: 1rem !important;
+  line-height: 1.65;
 }
-.notice--primary a { color: $primary-color !important; }
-.notice--primary strong { color: $text-color !important; }
+
+.notice--primary a {
+  color: darken($primary-color, 12%) !important;
+}
+
+.notice--primary strong {
+  color: $text-color !important;
+}
 
 /* NAV */
-.masthead { background: transparent !important; }
-.greedy-nav {
-  background: rgba(0,0,0,.4) !important;
-  backdrop-filter: blur(8px);
+.masthead {
+  background: rgba(255, 255, 255, .72) !important;
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid $border-color;
 }
 
-/* Sidebar & TOC */
-.sidebar .nav__title, .sidebar .nav__sub-title { color: $primary-color; }
-.sidebar .nav__list .nav__items a {
-  color: $muted-text-color; text-decoration: none;
-  border-radius: 10px; padding: .28rem .5rem;
-}
-.sidebar .nav__list .nav__items a:hover {
-  color: darken($primary-color, 12%); text-decoration: underline;
-}
-.sidebar .nav__list .nav__items .active,
-.sidebar .nav__list .nav__items a.active {
-  background: $primary-color;
-  @include yiq-contrasted($primary-color);
-  font-weight: 700; border-radius: 10px;
+.greedy-nav {
+  background: transparent !important;
 }
 
+.greedy-nav a {
+  color: $text-color;
+}
+
+.greedy-nav a:hover {
+  color: $primary-color;
+}
+
+/* Sidebar & TOC */
+.sidebar .nav__title,
+.sidebar .nav__sub-title {
+  color: darken($primary-color, 12%);
+}
+
+.sidebar .nav__list .nav__items a {
+  color: $muted-text-color;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  padding: .3rem .55rem;
+}
+
+.sidebar .nav__list .nav__items a:hover {
+  color: darken($primary-color, 12%);
+  background: mix($primary-color, #ffffff, 8%);
+  text-decoration: none;
+}
+
+.sidebar .nav__list .nav__items .active,
+.sidebar .nav__list .nav__items a.active {
+  background: mix($primary-color, #ffffff, 15%);
+  color: darken($primary-color, 18%);
+  font-weight: 700;
+  border-radius: var(--radius-lg);
+}
+
+/* Right TOC */
 .sidebar__right .toc .nav__title {
-  margin: 0; background: $primary-color;
-  @include yiq-contrasted($primary-color);
-  padding: .5rem .75rem; border-radius: 8px;
-  display: flex; align-items: center; gap: .4rem;
+  margin: 0;
+  background: mix($primary-color, #ffffff, 16%);
+  color: darken($primary-color, 18%);
+  padding: .55rem .75rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  border: 1px solid rgba(75, 175, 200, .18);
 }
+
 .sidebar__right .toc .toc__menu a {
-  color: $text-color; display: block; border-radius: 10px;
-  padding: .25rem .5rem; text-decoration: none;
+  color: $muted-text-color;
+  display: block;
+  border-radius: var(--radius-lg);
+  padding: .28rem .55rem;
+  text-decoration: none;
 }
+
 .sidebar__right .toc .toc__menu a:hover {
-  background: mix($primary-color, $background-color, 18%);
-  color: darken($primary-color, 12%); text-decoration: underline;
+  background: mix($primary-color, #ffffff, 8%);
+  color: darken($primary-color, 12%);
+  text-decoration: none;
 }
+
 .sidebar__right .toc .active > a {
-  font-weight: 700; color: darken($primary-color, 12%); text-decoration: underline;
+  font-weight: 700;
+  color: darken($primary-color, 16%);
+  background: mix($primary-color, #ffffff, 12%);
+  text-decoration: none;
 }
