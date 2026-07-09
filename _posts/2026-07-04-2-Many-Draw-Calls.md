@@ -1,9 +1,9 @@
 ---
 layout: single
-title: "Unity"
+title: "2 Many Draw Calls"
 date: 2026-07-04
 categories: [tech, unity]
-tags: [unity]
+tags: [unity, rendering, optimization]
 ---
 
 # "Draw Call이 너무 많습니다"

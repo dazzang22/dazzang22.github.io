@@ -218,7 +218,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 # timezone: Asia/Seoul
@@ -304,24 +304,23 @@ defaults:
       
     # Tech 전용(포트폴리오) 규칙: _posts/tech/* 에만 적용
   - scope:
-    path: "_posts/tech"
-    type: posts
+      path: "_posts/tech"
+      type: posts
     values:
-    categories: ["tech"]        # 카테고리 자동 부여
-    permalink: /tech/:slug/     # 깔끔한 의미형 URL
-    author_profile: false        # 포트폴리오 섹션은 저자 박스 최소화(선호에 따라)
-    share: true
-    toc: true
-    toc_sticky: true
+      categories: ["tech"]        # 카테고리 자동 부여
+      author_profile: false        # 포트폴리오 섹션은 저자 박스 최소화(선호에 따라)
+      share: true
+      toc: true
+      toc_sticky: true
 
 # Life/개인 글 규칙: _posts/life/* 에만 적용
   - scope:
-    path: "_posts/life"
-    type: posts
+      path: "_posts/life"
+      type: posts
     values:
-    categories: ["life"]
+      categories: ["life"]
     # 개인글은 날짜 포함 기존 스타일 유지(전역 permalink 상속)
-    author_profile: true
-    share: true
-    toc: true
-    toc_sticky: true
+      author_profile: true
+      share: true
+      oc: true
+      toc_sticky: true
