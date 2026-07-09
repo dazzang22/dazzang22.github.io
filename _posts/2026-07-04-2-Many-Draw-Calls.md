@@ -8,7 +8,9 @@ tags: [unity, rendering, optimization]
 
 # "Draw Call이 너무 많습니다"
 
-Draw Call 이 많을 때 어떻게 해야할까? Fam, let's break down!![E0B92587-BD06-4D73-A6C6-C70CA1073D09_4_5005_c](/Users/dazzang2/Pictures/Photos Library.photoslibrary/resources/derivatives/masters/E/E0B92587-BD06-4D73-A6C6-C70CA1073D09_4_5005_c.jpeg)
+Draw Call 이 많을 때 어떻게 해야할까? Fam, let's break down!
+
+![E0B92587-BD06-4D73-A6C6-C70CA1073D09_4_5005_c](../../assets/images/2026-07-04-2-Many-Draw-Calls/E0B92587-BD06-4D73-A6C6-C70CA1073D09_4_5005_c.jpeg)
 
 ## Draw Call 이란?
 
@@ -42,9 +44,9 @@ Occlusion Culling을 원활하게 사용하기 위해서는
 1. Occluder(가리는 object)와 Occludee(가려지는 Object)를 Static으로 설정하고
 2. 사전에 Occlusion을 **baked**해둬야 한다.
 
-![Screenshot 2026-07-09 at 8.15.19 PM](/Users/dazzang2/Desktop/Screenshot 2026-07-09 at 8.15.19 PM.png)
+![Screenshot 2026-07-09 at 8.15.19 PM](../../assets/images/2026-07-04-2-Many-Draw-Calls/Screenshot 2026-07-09 at 8.15.19 PM.png)
 
-![Screenshot 2026-07-09 at 8.15.12 PM](/Users/dazzang2/Desktop/Screenshot 2026-07-09 at 8.15.12 PM.png)
+![Screenshot 2026-07-09 at 8.15.12 PM](../../assets/images/2026-07-04-2-Many-Draw-Calls/Screenshot 2026-07-09 at 8.15.12 PM.png)
 
 ### Bake는 또 뭐고?
 
@@ -77,7 +79,7 @@ Unity 의 대표적인 Batching 기법으로는
 
 추가적으로) - SRP Batcher는 Draw Call을 줄이는 기술이 아니라, Material 상태 변경 비용을 줄이는 CPU 최적화 기술이다.
 
-![D937A94B-8F66-42E1-9791-F7C5596BD4AA_4_5005_c](/Users/dazzang2/Pictures/Photos Library.photoslibrary/resources/derivatives/masters/D/D937A94B-8F66-42E1-9791-F7C5596BD4AA_4_5005_c.jpeg)
+![D937A94B-8F66-42E1-9791-F7C5596BD4AA_4_5005_c](../../assets/images/2026-07-04-2-Many-Draw-Calls/D937A94B-8F66-42E1-9791-F7C5596BD4AA_4_5005_c.jpeg)
 
 사회초년생이 된 dazzang2의 미래 상상도입니다. 
 저 진짜 취업하고싶어요!
