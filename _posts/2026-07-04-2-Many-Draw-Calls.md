@@ -10,7 +10,7 @@ tags: [unity, rendering, optimization]
 
 Draw Call 이 많을 때 어떻게 해야할까? Fam, let's break down!
 
-![E0B92587-BD06-4D73-A6C6-C70CA1073D09_4_5005_c](../assets/images/2026-07-04-2-Many-Draw-Calls/E0B92587-BD06-4D73-A6C6-C70CA1073D09_4_5005_c.jpeg)
+![E0B92587-BD06-4D73-A6C6-C70CA1073D09_4_5005_c](/assets/images/2026-07-04-2-Many-Draw-Calls/E0B92587-BD06-4D73-A6C6-C70CA1073D09_4_5005_c.jpeg)
 
 ## Draw Call 이란?
 
@@ -44,9 +44,9 @@ Occlusion Culling을 원활하게 사용하기 위해서는
 1. Occluder(가리는 object)와 Occludee(가려지는 Object)를 Static으로 설정하고
 2. 사전에 Occlusion을 **baked**해둬야 한다.
 
-![Screenshot 2026-07-09 at 8.15.12 PM](../assets/images/2026-07-04-2-Many-Draw-Calls/Screenshot%202026-07-09%20at%208.15.12%E2%80%AFPM.png)
+![Screenshot 2026-07-09 at 8.15.12 PM](/assets/images/2026-07-04-2-Many-Draw-Calls/Screenshot%202026-07-09%20at%208.15.12%E2%80%AFPM.png)
 
-![Screenshot 2026-07-09 at 8.15.19 PM](../assets/images/2026-07-04-2-Many-Draw-Calls/Screenshot%202026-07-09%20at%208.15.19%E2%80%AFPM.png)
+![Screenshot 2026-07-09 at 8.15.19 PM](/assets/images/2026-07-04-2-Many-Draw-Calls/Screenshot%202026-07-09%20at%208.15.19%E2%80%AFPM.png)
 
 ### Bake는 또 뭐고?
 
