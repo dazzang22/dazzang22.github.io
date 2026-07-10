@@ -79,7 +79,7 @@ Unity 의 대표적인 Batching 기법으로는
 
 추가적으로) - SRP Batcher는 Draw Call을 줄이는 기술이 아니라, Material 상태 변경 비용을 줄이는 CPU 최적화 기술이다.
 
-![D937A94B-8F66-42E1-9791-F7C5596BD4AA_4_5005_c](../assets/images/2026-07-04-2-Many-Draw-Calls/D937A94B-8F66-42E1-9791-F7C5596BD4AA_4_5005_c.jpeg)
+![D937A94B-8F66-42E1-9791-F7C5596BD4AA_4_5005_c](/assets/images/2026-07-04-2-Many-Draw-Calls/D937A94B-8F66-42E1-9791-F7C5596BD4AA_4_5005_c.jpeg)
 
 사회초년생이 된 dazzang2의 미래 상상도입니다. 
 저 진짜 취업하고싶어요!
